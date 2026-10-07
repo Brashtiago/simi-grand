@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 11% 95%;
+    --foreground: 270 4% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 4% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 4% 11%;
+
+    --primary: 24 24% 55%;
+    --primary-foreground: 80 11% 96%;
+
+    --secondary: 207 24% 86%;
+    --secondary-foreground: 270 4% 11%;
+
+    --muted: 80 9% 90%;
+    --muted-foreground: 270 3% 38%;
+
+    --accent: 207 24% 86%;
+    --accent-foreground: 270 4% 11%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 80 7% 84%;
+    --input: 80 7% 84%;
+    --ring: 24 24% 55%;
+
+    --radius: 0.125rem;
+  }
+
+  .dark {
+    --background: 220 16% 7%;
+    --foreground: 80 10% 92%;
+
+    --card: 220 14% 10%;
+    --card-foreground: 80 10% 92%;
+
+    --popover: 220 14% 9%;
+    --popover-foreground: 80 10% 92%;
+
+    --primary: 24 24% 55%;
+    --primary-foreground: 80 11% 96%;
+
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 80 10% 92%;
+
+    --muted: 220 12% 16%;
+    --muted-foreground: 220 8% 60%;
+
+    --accent: 220 12% 18%;
+    --accent-foreground: 80 10% 92%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 24 24% 55%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  }
+  .font-body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 640px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
